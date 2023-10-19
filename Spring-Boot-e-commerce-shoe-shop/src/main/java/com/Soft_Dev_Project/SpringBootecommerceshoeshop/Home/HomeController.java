@@ -1,11 +1,11 @@
-package com.Soft_Dev_Project.SpringBootecommerceshoeshop;
+package com.Soft_Dev_Project.SpringBootecommerceshoeshop.Home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-public class Home {
+public class HomeController {
 
     @GetMapping("/")
     public String homePage(){
