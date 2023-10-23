@@ -89,3 +89,6 @@ input::-webkit-inner-spin-button {
 #sidebar h3{
     border:2px black solid;
 }
+.sidebar-content{
+    overflow-y: hidden;
+}
