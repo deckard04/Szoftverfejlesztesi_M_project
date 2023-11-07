@@ -1,3 +1,4 @@
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
 <div class="main-content">
     <div class="section-content secttion-conttent-p30">
         <div class="container-fluid">
@@ -5,10 +6,11 @@
                 <div *ngFor="let tempProduct of products" class="col-md-3">
                     
                     <div class="product-box">
-                        <img src="{{tempProduct.imgUrl}}" class="img-responsive" style="width: 200px; height: 150px;"/>
+                        <img src="{{tempProduct.imgUrl}}" class="img-responsive"/>
                         <h1>{{ tempProduct.model }}</h1>
-                        <div class="price"> {{tempProduct.price | currency: 'HUF'}}</div>
-                        <a href="#" class="primary-btn">Add to cart</a>
+                        <h2>{{ tempProduct.brand }}</h2>
+                        <div class="price">{{ tempProduct.price }}</div>
+                        <a href="#" class="primary-btn">Add to cart<i class="gg-shopping-cart"></i></a>
                     </div>
 
                 </div>

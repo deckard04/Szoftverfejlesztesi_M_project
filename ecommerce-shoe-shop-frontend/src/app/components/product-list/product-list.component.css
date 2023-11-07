@@ -1,0 +1,45 @@
+.product-box{
+    justify-content: space-around;
+    text-align: center;
+    border-right: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    margin: 20px;
+    min-width: 320px;
+    flex: auto;
+}
+
+img {
+    width: 350px;
+    min-width: 320px;
+    aspect-ratio: 1.67 / 1;
+    position: relative;
+    left: -10px;
+}
+
+.col-md-3 {
+    width: 25%;
+    min-width: 300px;
+    padding: 0px 5px;
+}
+
+.price::after {
+    content: ".000 Ft";
+}
+
+.price {
+    text-align: center;
+    color: gray;
+    font-size: x-large;
+}
+.primary-btn {
+    display: inline-flex;
+    justify-content: center;
+    color: black;
+    margin: 10px;
+    text-decoration:none;
+    font-size: larger;
+}
+
+.primary-btn:hover {
+    font-weight: bold;
+}
