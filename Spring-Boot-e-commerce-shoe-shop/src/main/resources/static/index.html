@@ -1,13 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipő</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-
+    <nav>
+        <h1 class="nav-item">Cipőbolt</h1>
+        <span>
+            <input type="search" placeholder="Keresés"> 
+            <input type="button" value="Keresés">
+        </span>
+        <span id="user-buttons">
+            <a class="nav-item" href="./login/login">Bejelntkezés</a> 
+            <a class="nav-item">Kosár</a>
+        </span>
+    </nav>
+    <span id="main">
+        <div id="sidebar">
+            <div id="price-contents" class="sidebar-content">
+                <h3>Ár</h3>
+                <span id="price-display">
+                    <input type="number" placeholder="Min. ár">
+                    -
+                    <input type="number" placeholder="Max. ár">
+                </span>
+            </div>
+            <div id="brand-contents" class="sidebar-content">
+                <h3>Márka</h3>
+                <div><input type="checkbox"> Adidas</div>
+                <div><input type="checkbox"> Nike</div>
+                <div><input type="checkbox"> Puma</div>
+                <div><input type="checkbox"> Vans</div>
+                <div><input type="checkbox"> Gucci</div>
+                <div><input type="checkbox"> Converse</div>
+            </div>
+            <div id="color-contents" class="sidebar-content">
+                <h3>Szín</h3>
+                <div><input type="checkbox"> Kék</div>
+                <div><input type="checkbox"> Zöld</div>
+                <div><input type="checkbox"> Fehér</div>
+                <div><input type="checkbox"> Fekete</div>
+                <div><input type="checkbox"> Piros</div>
+                <div><input type="checkbox"> Sárga</div>
+                <div><input type="checkbox"> Arany</div>
+                <div><input type="checkbox"> Barna</div>
+                <div><input type="checkbox"> Szürke</div>
+                <div><input type="checkbox"> Lila</div>
+            </div>
+            <div id="size-contents" class="sidebar-content">
+                <h3>Méret</h3>
+                <div><input type="checkbox"> 35</div>
+                <div><input type="checkbox"> 36</div>
+                <div><input type="checkbox"> 37</div>
+                <div><input type="checkbox"> 38</div>
+                <div><input type="checkbox"> 39</div>
+                <div><input type="checkbox"> 40</div>
+                <div><input type="checkbox"> 41</div>
+                <div><input type="checkbox"> 42</div>
+                <div><input type="checkbox"> 43</div>
+                <div><input type="checkbox"> 44</div>
+                <div><input type="checkbox"> 45</div>
+                <div><input type="checkbox"> 46</div>
+                <div><input type="checkbox"> 47</div>
+                <div><input type="checkbox"> 48</div>
+            </div>
+            <div id="type-contents" class="sidebar-content">
+                <h3>Típus</h3>
+                <div><input type="checkbox"> Sportcipő</div>
+                <div><input type="checkbox"> Tornacipő</div>
+                <div><input type="checkbox"> Félcipő</div>
+                <div><input type="checkbox"> Csizma</div>
+                <div><input type="checkbox"> Túracipő</div>
+            </div>
+        </div>
+        <div id="main-window">
+            <div id="shoe1" class="displayed-item">
+                <img src="./imgs/nike.png"><br>
+                Legújabb lábbeli<br>
+                Ár: 17000 Ft
+            </div>
+            <div id="shoe2" class="displayed-item">
+                <img src="./imgs/adidas.png"><br>
+                Orosz tappancsvédő<br>
+                Ár: 1500 Ft
+            </div>
+        </div>
+    </span>
 </body>
 </html>
+<script src="animations.js"></script>
