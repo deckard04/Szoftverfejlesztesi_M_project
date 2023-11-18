@@ -97,7 +97,7 @@ jobs:
           args:
             -Dsonar.projectKey=deckard04_Szoftverfejlesztesi_M_project
             -Dsonar.organization=szoftverprojectm
- sonarcloudScan1:
+  sonarcloudScan1:
     name: SonarCloudScan1
     runs-on: ubuntu-latest
     steps:
