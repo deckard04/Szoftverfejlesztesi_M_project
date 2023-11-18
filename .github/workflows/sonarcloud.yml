@@ -81,6 +81,7 @@ jobs:
           uses: actions/setup-java@v1
           with:
             java-version: '18'
+            projectBaseDir: Spring-Boot-e-commerce-shoe-shop/
         - name: Analyze with SonarCloud
           run: mvn -B sonar:sonar
           env:
