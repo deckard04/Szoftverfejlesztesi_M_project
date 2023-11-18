@@ -67,8 +67,8 @@
             <id>sonar</id>
             <properties>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-                <sonar.organization>magicsoup</sonar.organization>
-                <sonar.projectKey>MagicSoup_SpringJOOQ</sonar.projectKey>
+                <sonar.organization>szoftverprojectm</sonar.organization>
+                <sonar.projectKey>deckard04_Szoftverfejlesztesi_M_project</sonar.projectKey>
                 <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
             </properties>
             <activation>
@@ -78,8 +78,8 @@
                 <plugins>
                     <plugin>
                         <groupId>org.sonarsource.scanner.maven</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
-                        <version>${sonar.version}</version>
+   			 <artifactId>sonar-maven-plugin</artifactId>
+    			<version>3.10.0.2594</version>
                         <executions>
                             <execution>
                                 <phase>verify</phase>
