@@ -1,0 +1,4 @@
+<form class="d-flex" role="search">
+    <input #searchInput (keyup.enter)="doSearch(searchInput.value)" class="form-control me-2" type="text" placeholder="Pl: Jordan 1 High Dior" aria-label="Search">
+    <button (click)="doSearch(searchInput.value)" class="btn btn-outline-primary" type="submit">Keresés</button>
+  </form>
