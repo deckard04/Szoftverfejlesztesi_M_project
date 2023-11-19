@@ -1,0 +1,9 @@
+.product-box{
+    justify-content: space-around;
+    text-align: center;
+    border-right: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    margin: 20px;
+    min-width: 320px;
+    flex: auto;
+}
