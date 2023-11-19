@@ -8,6 +8,11 @@
     flex: auto;
 }
 
+a{
+    text-decoration: none;
+    color: darkgray;
+}
+
 img {
     width: 350px;
     min-width: 320px;
@@ -40,6 +45,7 @@ img {
     font-size: larger;
 }
 
-.primary-btn:hover {
+.primary-btn:hover,h1:hover {
     font-weight: bold;
+    color: black;
 }
