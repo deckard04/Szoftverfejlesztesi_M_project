@@ -106,5 +106,5 @@ jobs:
         with:
           projectBaseDir: ecommerce-shoe-shop-frontend/
           args:
-            -Dsonar.projectKey=deckard04_Szoftverfejlesztesi_M_project
+            -Dsonar.projectKey=szoftverprojectm_Szoftverfejlesztesi_M_project_frontend
             -Dsonar.organization=szoftverprojectm
