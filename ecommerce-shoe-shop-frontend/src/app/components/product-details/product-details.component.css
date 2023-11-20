@@ -1,0 +1,55 @@
+.price::after {
+    content: ".000 Ft";
+}
+
+*{
+    text-align: center;
+}
+
+.price {
+    font-size: xx-large;
+}
+
+h1,h2,.price,span,a {
+    width: 60%;
+    margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: darkgray;
+}
+
+.mydiv {
+    justify-content: center;
+    margin: auto;
+}
+
+span{
+    text-align: left;
+    border-left: solid 2px darkgray;
+    margin-bottom: 30px;
+}
+
+img{
+    min-width: 400px;
+    aspect-ratio: 1.67 / 1;
+    width: 50%;
+}
+
+.mydiv{
+    border-top: solid 2px black;
+}
+
+.primary-btn {
+    display: inline-flex;
+    justify-content: center;
+    color: black;
+    margin: 10px;
+    text-decoration:none;
+    font-size: larger;
+}
+
+.primary-btn:hover {
+    font-weight: bold;
+}

@@ -15,22 +15,21 @@
           </li>
           <li>
             <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Termékek</span> </a>
+              <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Márkák</span> </a>
             <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
               <li class="w-100">
-                <a href="#" class="nav-link px-0"> - Cipők</a>
+                <a routerLink="/category/nike" href="#" class="nav-link px-0"> - Nike</a>
+              </li>
+              <li class="w-100">
+                <a routerLink="/category/adidas" href="#" class="nav-link px-0"> - Adidas</a>
+              </li>
+              <li class="w-100">
+                <a routerLink="/category/new balance" href="#" class="nav-link px-0"> - New Balance</a>
               </li>
             </ul>
           </li>
         </ul>
         <hr>
-        <div class="pb-4">
-          <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-sign-in" aria-hidden="true"></i>
-            <span class="d-none d-sm-inline mx-1">&nbsp; Log In</span>
-          </a>
-        </div>
       </div>
     </div>
     <div class="col py-3">
@@ -38,13 +37,22 @@
         <div class="container-fluid">
           <a class="navbar-brand">
           </a>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Pl: Jordan 1 High Dior" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Keresés</button>
-          </form>
+          <app-search></app-search>
+          <a href="#" class="d-flex align-items-center text-black text-decoration-none" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-primary">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="d-none d-sm-inline mx-1"> 32 | 100.000Ft</span>
+            </button>
+            &nbsp;
+            <button class="btn btn-outline-primary pl-5">
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
+              <span class="d-none d-sm-inline mx-1">&nbsp; Log In</span>
+            </button>
+          </a>
         </div>
       </nav>
-      <app-product-list></app-product-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

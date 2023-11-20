@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -39,5 +40,6 @@ public class Product {
     @Column(name = "product_image")
     private String imgUrl;
 
-
+    @OneToMany(mappedBy = "productId")
+    private List<Available> sizes;
 }
