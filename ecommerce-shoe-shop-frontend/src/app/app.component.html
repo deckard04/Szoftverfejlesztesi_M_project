@@ -2,7 +2,7 @@
   <div class="row flex-nowrap">
     <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
       <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-        <a href="/" class="d-flex align-items-center pt-3 pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a href="/products" class="d-flex align-items-center pt-3 pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <span class="fs-5 d-none d-sm-inline">
             <h2>Shoe WORLD</h2>
           </span>
@@ -40,10 +40,7 @@
           <app-search></app-search>
           <a href="#" class="d-flex align-items-center text-black text-decoration-none" id="dropdownUser1"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <button class="btn btn-outline-primary">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="d-none d-sm-inline mx-1"> 32 | 100.000Ft</span>
-            </button>
+            <app-cart-status></app-cart-status>
             &nbsp;
             <button class="btn btn-outline-primary pl-5">
               <i class="fa fa-sign-in" aria-hidden="true"></i>

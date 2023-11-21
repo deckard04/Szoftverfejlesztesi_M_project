@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http'
 import { Product } from '../common/product';
+import { Availables } from '../common/sizes';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,14 @@ export class ProductService {
     )
   }
 
+  getSizes(theProdId: number): Observable<Availables[]>{
+    const sizeUrl = `${this.url}/${theProdId}/sizes`;
+    console.log(sizeUrl);
+    return this.httpClient.get<GetResponseSize>(sizeUrl).pipe(
+      map(elements => elements._embedded.availables)
+    )
+  }
+
   getProduct(theProdId: number): Observable<Product> {
     
     const itemUrl = `${this.url}/${theProdId}`;
@@ -45,5 +54,10 @@ export class ProductService {
 interface GetResponse{
   _embedded: {
     products: Product[];
+  }
+}
+interface GetResponseSize{
+  _embedded: {
+    availables: Availables[];
   }
 }
