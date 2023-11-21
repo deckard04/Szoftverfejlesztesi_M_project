@@ -11,9 +11,7 @@
                         <a routerLink="/product/{{tempProduct.id}}">
                         <h1>{{ tempProduct.model }} </h1>
                         </a>
-                        <h2>{{ tempProduct.brand }}</h2>
-                        <div class="price">{{ tempProduct.price }}</div>
-                        <a href="#" class="primary-btn">Add to cart<i class="gg-shopping-cart"></i></a>
+                        <h2>{{ tempProduct.brand }}, {{ tempProduct.releaseDate | date : "y" }}</h2>
                     </div>
                 </div>
             </div>
