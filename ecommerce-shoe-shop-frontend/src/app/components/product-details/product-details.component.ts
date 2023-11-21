@@ -9,7 +9,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { CommonModule } from '@angular/common';
-import { CartService } from 'src/app/services/CartService';
+import { CartService } from 'src/app/services/cart.service';
 import { CartItem } from 'src/app/common/cart-item';
 
 @Component({
