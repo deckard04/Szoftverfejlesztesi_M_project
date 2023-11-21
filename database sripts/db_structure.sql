@@ -1,3 +1,4 @@
+drop database if exists szfm;
 CREATE DATABASE szfm;
 USE szfm;
 CREATE TABLE `Product`(
@@ -8,23 +9,20 @@ CREATE TABLE `Product`(
     `release_date` DATE NULL,
     `price` INT NOT NULL,
     `description` TEXT NULL,
-    `product_image` VARCHAR(255) NOT NULL
-);
+    `product_image` VARCHAR(255) NOT NULL);
 CREATE TABLE `order`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `order_item_id` BIGINT UNSIGNED NOT NULL,
     `user_id` BIGINT UNSIGNED NOT NULL,
     `order_date` DATE NOT NULL,
     `order_status` VARCHAR(255) NOT NULL,
-    `grand_total` INT NOT NULL
-);
+    `grand_total` INT NOT NULL);
 CREATE TABLE `user`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `user_name` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
-    `tel_number` VARCHAR(255) NOT NULL
-);
+    `tel_number` VARCHAR(255) NOT NULL);
 CREATE TABLE `order_item`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `product_id` BIGINT UNSIGNED NOT NULL,
@@ -35,8 +33,7 @@ CREATE TABLE `product_available`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `product_id` BIGINT UNSIGNED NOT NULL,
     `size` SMALLINT NOT NULL,
-    `is_in_stock` TINYINT(1) NOT NULL
-);
+    `is_in_stock` TINYINT(1) NOT NULL);
 CREATE TABLE `user_details`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `user_id` BIGINT UNSIGNED NOT NULL,
@@ -44,8 +41,7 @@ CREATE TABLE `user_details`(
     `city` VARCHAR(255) NULL,
     `postcode` SMALLINT NULL,
     `adress` VARCHAR(255) NOT NULL,
-    `payment_method` VARCHAR(255) NULL
-);
+    `payment_method` VARCHAR(255) NULL);
 ALTER TABLE
     `order` ADD CONSTRAINT `order_order_item_id_foreign` FOREIGN KEY(`order_item_id`) REFERENCES `order_item`(`id`);
 ALTER TABLE
