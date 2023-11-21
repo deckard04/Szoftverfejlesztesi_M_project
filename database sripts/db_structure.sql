@@ -1,4 +1,3 @@
-drop database if exists szfm;
 CREATE DATABASE szfm;
 USE szfm;
 CREATE TABLE `Product`(
