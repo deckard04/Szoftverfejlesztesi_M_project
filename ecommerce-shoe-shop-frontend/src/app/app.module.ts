@@ -13,7 +13,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CommonModule } from '@angular/common';
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import {NgxWebstorageModule} from 'ngx-webstorage';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 const routes: Routes = [
+{path: 'checkout', component: CheckoutComponent},
+{path: 'cart', component: CartDetailsComponent},
 {path: 'category/:id', component: ProductListComponent},
 {path: 'product/:id', component: ProductDetailsComponent},
 {path: 'search/:keyword', component: ProductListComponent},
