@@ -11,7 +11,7 @@
                 <mat-form-field class="col-md-3">
                     <mat-label>Válassz méretet</mat-label>
                     <mat-select [(ngModel)]="selectedValue" name="food">
-                      <mat-option *ngFor="let size of sizes" [value] = "size">
+                      <mat-option *ngFor="let size of sizes" [value] = "size" [disabled]="size.is_in_stock === 0">
                         {{size.size}}
                       </mat-option>
                     </mat-select>

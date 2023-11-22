@@ -1,5 +1,3 @@
-import { Product } from "./product";
-
 export class Availables {
 
     constructor(
