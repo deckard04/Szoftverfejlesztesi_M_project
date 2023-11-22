@@ -35,6 +35,8 @@ const routes: Routes = [
     ProductListComponent,
     SearchComponent,
     CartStatusComponent,
+    CartDetailsComponent,
+    CheckoutComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -45,6 +47,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatSlideToggleModule,
     ProductDetailsComponent,
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
