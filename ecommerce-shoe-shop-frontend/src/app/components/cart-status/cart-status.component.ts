@@ -9,10 +9,10 @@ import { LocalStorage, SessionStorage, SessionStorageService } from 'ngx-webstor
 })
 export class CartStatusComponent implements OnInit {
 
-  totalPrice!: number;
+  totalPrice: number = 0;
  
   // store the totalQuantity in session with name totalQuantity
-  totalQuantity!: number;
+  totalQuantity: number = 0;
 
   constructor(private cartservice: CartService){
 
