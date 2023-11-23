@@ -6,7 +6,7 @@
                 <img src="{{product.imgUrl}}" class="img-responsive" />
                 <h1>{{ product.model }} </h1>
                 <h2>{{ product.brand }}</h2>
-                <div class="price">{{ product.price }}</div>
+                <div class="price">{{ product.price | number: "2.0" }}</div>
                 <div class="pt-3">
                 <mat-form-field class="col-md-3">
                     <mat-label>Válassz méretet</mat-label>

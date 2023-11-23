@@ -5,7 +5,7 @@
       <tr>
         <th scope="col">Termék kép</th>
         <th scope="col">Részletek</th>
-        <th scope="col"></th>
+        <th scope="col">Db</th>
       </tr>
     </thead>
     <tbody>
@@ -25,13 +25,13 @@
             </button>
           </div>
         </div><br>
-            {{tempCartItem.price*tempCartItem.quantity | currency: 'HUF '}}
+            <p class="price">{{tempCartItem.price*tempCartItem.quantity | number: "1.0"}}</p>
         </td>
       </tr>
       <tr>
         <td></td>
         <td></td>
-        <td>Összesen: {{ totalQuantity }} darab termék<br> Kosár teljes értéke: {{ totalPrice | currency: 'HUF ' }} <br>
+        <td>Összesen: {{ totalQuantity }} darab termék<br> <p class="price">Kosár teljes értéke: {{ totalPrice | number: "1.0" }}</p>
             <button routerLink="/checkout" class="btn btn-primary">Megrendelés</button></td>
       </tr>
     </tbody>
