@@ -1,0 +1,16 @@
+.imgsize {
+    width: 25%;
+}
+
+.price::after {
+    content: " Ft";
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+}

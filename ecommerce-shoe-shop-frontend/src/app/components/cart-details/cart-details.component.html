@@ -1,0 +1,43 @@
+<div class="container">
+  <div *ngIf="cartItems.length > 0">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Termék kép</th>
+        <th scope="col">Részletek</th>
+        <th scope="col">Db</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tempCartItem of cartItems">
+                <td style="width: 25%"><img src="{{tempCartItem.imageUrl}}" class="img-thumbnail"/></td>
+        <td scope="row">{{tempCartItem.brand}} {{tempCartItem.model}} <br>
+            méret: {{tempCartItem.size}}
+        </td>
+        <td><div>
+          <div class="col">
+            <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+              <i class="fa fa-plus"></i>
+            </button>
+            {{tempCartItem.quantity}} darab
+            <button (click)="decrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+              <i class="fa fa-minus"></i>
+            </button>
+          </div>
+        </div><br>
+            <p class="price">{{tempCartItem.price*tempCartItem.quantity | number: "1.0"}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>Összesen: {{ totalQuantity }} darab termék<br> <p class="price">Kosár teljes értéke: {{ totalPrice | number: "1.0" }}</p>
+            <button routerLink="/checkout" class="btn btn-primary">Megrendelés</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div *ngIf="cartItems.length === 0" class="alert alert-warning text-center">
+    <h2>A kosarad jelenleg üres</h2>
+  </div>
+</div>

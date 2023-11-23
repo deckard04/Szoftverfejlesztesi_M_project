@@ -27,25 +27,17 @@ img {
     padding: 0px 5px;
 }
 
-.price::after {
-    content: ".000 Ft";
-}
-
 .price {
     text-align: center;
     color: gray;
     font-size: x-large;
 }
-.primary-btn {
-    display: inline-flex;
-    justify-content: center;
-    color: black;
-    margin: 10px;
-    text-decoration:none;
-    font-size: larger;
-}
 
-.primary-btn:hover,h1:hover {
+h1:hover {
     font-weight: bold;
     color: black;
+}
+
+h2 {
+    margin-bottom: 10px;
 }

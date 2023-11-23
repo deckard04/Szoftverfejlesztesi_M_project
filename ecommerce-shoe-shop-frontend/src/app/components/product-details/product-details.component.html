@@ -3,12 +3,22 @@
     <div class="section-content secttion-conttent-p30">
         <div class="container-fluid">
             <div class="row align-items-center mydiv">
-                <img src="{{product.imgUrl}}" class="img-responsive"/>
+                <img src="{{product.imgUrl}}" class="img-responsive" />
                 <h1>{{ product.model }} </h1>
                 <h2>{{ product.brand }}</h2>
-                <div class="price">{{ product.price }}</div>
-                <a href="#" class="primary-btn">Add to cart<i class="gg-shopping-cart"></i></a>
-                <span >{{ product.description }} </span>
+                <div class="price">{{ product.price | number: "2.0" }}</div>
+                <div class="pt-3">
+                <mat-form-field class="col-md-3">
+                    <mat-label>Válassz méretet</mat-label>
+                    <mat-select [(ngModel)]="selectedValue" name="food">
+                      <mat-option *ngFor="let size of sizes" [value] = "size" [disabled]="size.is_in_stock === 0">
+                        {{size.size}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <button (click)="addToCart(product)" href="#" class="primary-btn">Add to cart<i class="gg-shopping-cart"></i></button>
+                <span>{{ product.description }}</span>
             </div>
         </div>
     </div>

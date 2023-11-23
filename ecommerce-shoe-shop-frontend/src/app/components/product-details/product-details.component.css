@@ -1,5 +1,5 @@
 .price::after {
-    content: ".000 Ft";
+    content: " Ft";
 }
 
 *{
@@ -28,7 +28,7 @@ a{
 span{
     text-align: left;
     border-left: solid 2px darkgray;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 img{
@@ -47,9 +47,17 @@ img{
     color: black;
     margin: 10px;
     text-decoration:none;
-    font-size: larger;
+    font-size: x-large;
+    border: none;
+    background-color: white;
+    width: 40%;
 }
 
 .primary-btn:hover {
     font-weight: bold;
+}
+
+mat-form-field {
+    margin-top: 10px;
+    min-width: 200px;
 }
