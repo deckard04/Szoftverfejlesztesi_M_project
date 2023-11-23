@@ -1,3 +1,7 @@
 .imgsize {
     width: 25%;
 }
+
+.price::after {
+    content: " Ft";
+}

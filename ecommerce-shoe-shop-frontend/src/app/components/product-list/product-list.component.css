@@ -27,10 +27,6 @@ img {
     padding: 0px 5px;
 }
 
-.price::after {
-    content: ".000 Ft";
-}
-
 .price {
     text-align: center;
     color: gray;
