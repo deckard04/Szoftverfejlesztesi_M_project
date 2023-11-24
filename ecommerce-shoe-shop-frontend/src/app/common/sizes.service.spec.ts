@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { SizesService } from './sizes.service';
 
 describe('SizesService', () => {
@@ -14,3 +13,4 @@ describe('SizesService', () => {
     expect(service).toBeTruthy();
   });
 });
+
