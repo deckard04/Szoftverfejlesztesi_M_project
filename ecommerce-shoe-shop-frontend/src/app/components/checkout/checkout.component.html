@@ -4,20 +4,61 @@
         <div formGroupName="customer" class="col-md-12">
             <label for="email" class="form-label">Email</label>
             <input formControlName="email" type="email" class="form-control" id="email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                <div *ngIf="email.errors.required">
+                    Email megadása kötelező
+                </div>
+                <div *ngIf="email.errors.pattern">
+                    Email formátum nem megfelelő
+                </div>
+            </div>
+            
         </div>
         <div formGroupName="customer" class="col-md-6">
             <label for="lastName" class="form-label">Vezetéknév</label>
             <input formControlName="lastName" type="text" class="form-control" id="lastName" placeholder="Végh">
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+                <div *ngIf="lastName.errors.required || lastName.errors.notOnlyWhiteSpace">
+                    Vezetéknév megadása kötelező
+                </div>
+
+                <div *ngIf="lastName.errors.minlength && !lastName.errors.notOnlyWhiteSpace ">
+                    Vezetéknév nem megfelelő hosszú
+                </div>
+            </div>
         </div>
         <div formGroupName="customer" class="col-md-6">
             <label for="firstName" class="form-label">Keresztnév</label>
             <input formControlName="firstName" type="text" class="form-control" id="firstName"
-                   placeholder="József Lajos">
+                placeholder="József Lajos">
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                <div *ngIf="firstName.errors.required || firstName.errors.notOnlyWhiteSpace">
+                    Vezetéknév megadása kötelező
+                </div>
+
+                <div *ngIf="firstName.errors.minlength && !firstName.errors.notOnlyWhiteSpace">
+                    Vezetéknév nem megfelelő hosszú
+                </div>
+            </div>
+        </div>
+        <div formGroupName="customer" class="col-md-6">
+            <label for="phone" class="form-label">Telefonszám</label>
+            <input formControlName="phone" type="text" id="phone" name="phone"
+                class="form-control" id="phone">
+                <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+                    <div *ngIf="phone.errors.required">
+                        Telefonszám megadása kötelező
+                    </div>
+                    <div *ngIf="phone.errors.pattern">
+                        A telefonszám formátuma nem megfelelő, a rendszer csak magyar telefonszámot fogad el
+                    </div>
+                </div>
         </div>
         <h2 class="mt-4">Cím</h2>
         <div formGroupName="shippingAddress" class="col-12">
             <label for="street" class="form-label">Utca</label>
-            <input formControlName="street" type="text" class="form-control" id="street" placeholder="Podmaniczky utca 72.">
+            <input formControlName="street" type="text" class="form-control" id="street"
+                placeholder="Podmaniczky utca 72.">
         </div>
         <div formGroupName="shippingAddress" class="col-md-6">
             <label for="inputCity" class="form-label">Település</label>
@@ -27,12 +68,35 @@
             <label for="inputState" class="form-label">Megye</label>
             <select formControlName="region" id="inputState" class="form-select">
                 <option selected></option>
-                <option>...</option>
+                <option>Győr-Moson-Sopron Vármegye</option>
+                <option>Vas Vármegye</option>
+                <option>Zala Vármegye</option>
+                <option>Somogy Vármegye</option>
+                <option>Tolna Vármegye</option>
+                <option>Baranya Vármegye</option>
+                <option>Fejér Vármegye</option>
+                <option>Veszprém Vármegye</option>
+                <option>Komárom-Esztergom Vármegye</option>
+                <option>Bács-Kiskun Vármegye</option>
+                <option>Pest Vármegye</option>
+                <option>Nógrád Vármegye</option>
+                <option>Heves Vármegye</option>
+                <option>Csongrád-Csanád Vármegye</option>
+                <option>Jász-Nagykun-Szolnok Vármegye</option>
+                <option>Békés Vármegye</option>
+                <option>Borsod-Abaúj-Zemplén Vármegye</option>
+                <option>Hajdú-Bihar Vármegye</option>
+                <option>Szabolcs-Szatmár-Bereg Vármegye</option>
             </select>
         </div>
         <div formGroupName="shippingAddress" class="col-md-2">
             <label for="zipcode" class="form-label">Irányítószám</label>
             <input formControlName="zipcode" type="text" class="form-control" id="zipcode">
+        </div>
+        <div class="text-align-center mt-5">
+            <h2 class="text-center">Rendelés összegző</h2>
+            <p class="text-center">Összesen: {{ totalQuantity }} darab termék</p><br> 
+            <p class="price text-center">Kosár teljes értéke: {{ totalPrice | number: "1.0" }}
         </div>
         <div>
             <button type="submit" class="btn btn-primary">Megrendelés</button>
