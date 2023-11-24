@@ -101,7 +101,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Test and coverage
-        run: yarn jest --coverage
+        run: yarn jest --coverage --file ecommerce-shoe-shop-frontend/package.json
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
